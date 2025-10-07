@@ -10,7 +10,6 @@ function productExceptSelf(nums: number[]): number[] {
             l[i] = l[i - 1] * nums[i - 1];
             r[nums.length - 1 - i] = r[nums.length - i] * nums[nums.length - i];
         }
-        console.log(l,r)
     }
     for (let i = 0; i < nums.length; i++) {
         products[i] = l[i] * r[i]
