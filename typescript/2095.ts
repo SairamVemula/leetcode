@@ -1,6 +1,6 @@
 
 // Definition for singly-linked list.
-class ListNode {
+export class ListNode {
     val: number
     next: ListNode | null
     constructor(val?: number, next?: ListNode | null) {
@@ -72,6 +72,6 @@ function deleteMiddle(head: ListNode | null): ListNode | null {
 };
 
 
-console.log(deleteMiddle(ListNode.fromArray([1,3,4,7,1,2,6]))?.toString())
-console.log(deleteMiddle(ListNode.fromArray([1,2,3,4]))?.toString())
-console.log(deleteMiddle(ListNode.fromArray([2,1]))?.toString())
+// console.log(deleteMiddle(ListNode.fromArray([1,3,4,7,1,2,6]))?.toString())
+// console.log(deleteMiddle(ListNode.fromArray([1,2,3,4]))?.toString())
+// console.log(deleteMiddle(ListNode.fromArray([2,1]))?.toString())

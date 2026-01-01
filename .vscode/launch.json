@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Bun File",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "bun",
+      "program": "${workspaceFolder}/typescript/328.ts",  // Change to your file path
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}
