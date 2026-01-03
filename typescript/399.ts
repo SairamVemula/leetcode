@@ -28,7 +28,10 @@ function calcEquation(equations: string[][], values: number[], queries: string[]
         const [a, b] = q;
         if (!map[a] || !map[b]) solutions.push(-1);
         else if (a === b) solutions.push(1);
-        else solutions.push(dfs(map[a], b))
+        else {
+            const r = dfs(map[a], b)
+            solutions.push(isNaN(r) ? -1 : r)
+        }
     }
     return solutions;
 };
@@ -84,9 +87,9 @@ function calcEquation(equations: string[][], values: number[], queries: string[]
 // const queries = [["a", "c"], ["b", "a"], ["a", "e"], ["a", "a"], ["x", "x"]]
 
 
-const equations = [["x1","x2"],["x2","x3"],["x3","x4"],["x4","x5"]];
-const values = [3.0,4.0,5.0,6.0];
-const queries = [["x1","x5"],["x5","x2"],["x2","x4"],["x2","x2"],["x2","x9"],["x9","x9"]]
+const equations = [["x1", "x2"], ["x2", "x3"], ["x3", "x4"], ["x4", "x5"]];
+const values = [3.0, 4.0, 5.0, 6.0];
+const queries = [["x1", "x5"], ["x5", "x2"], ["x2", "x4"], ["x2", "x2"], ["x2", "x9"], ["x9", "x9"]]
 
 // const equations = [["a", "b"], ["b", "c"], ["a", "c"]]
 // const values = [2.0, 3.0, 6.0]
