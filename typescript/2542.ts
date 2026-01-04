@@ -4,7 +4,7 @@ function maxScore(nums1: number[], nums2: number[], k: number): number {
         private heap: number[] = [];
         constructor(heap: number[] = []) {
             for (let i = 0; i < heap.length; i++) {
-                this.insert([heap[i], i])
+                this.insert(heap[i])
             }
         }
         insert(val: number) {
@@ -61,6 +61,9 @@ function maxScore(nums1: number[], nums2: number[], k: number): number {
         }
         get length(){
             return this.heap.length
+        }
+        get peek(){
+            return this.heap[0]
         }
     }
 
