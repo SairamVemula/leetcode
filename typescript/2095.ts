@@ -32,6 +32,9 @@ export class ListNode {
 
         return values.join(" -> ");
     }
+        [Symbol.for("nodejs.util.inspect.custom")]() {
+        return this.toString()
+    }
 }
 
 // brute force
